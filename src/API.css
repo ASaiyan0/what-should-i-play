@@ -1,0 +1,71 @@
+.API {
+  height: 100%;
+  align-content: center;
+  text-align: center;
+}
+
+.API-instructions {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.API-submit {
+  width: 10%;
+  min-width: 60px;
+  max-width: 100px;
+  border-radius: 15px;
+  color: #fff;
+  background-color: #364563;
+  padding: 5px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.API-textBox {
+  height: 1.5rem;
+  width: 30%;
+  min-width: 300px;
+  max-width: 400px;
+  background-color: #fff;
+  text-align: center;
+}
+
+.API-tooltip {
+  position: relative;
+  border-bottom: 1px dotted #000;
+}
+
+.API-tooltip:before {
+  content: attr(data-text);
+  position: absolute;
+  top: 100%;
+  left: -25%;
+  transform: translateY(-150%);
+  border-radius: 15px;
+  min-width: fit-content;
+  min-height: fit-content;
+  padding: 15px;
+  background: #364563;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: initial;
+  font-style: italic;
+  display: none;
+}
+
+.API-tooltip:hover:before,
+.API-tooltip:hover:after {
+  display: inline-block;
+}
+
+.API-tooltip:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-150%);
+  border: 10px solid #364563;
+  border-color: #364563 transparent transparent transparent;
+  display: none;
+}

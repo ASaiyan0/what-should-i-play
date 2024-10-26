@@ -1,0 +1,19 @@
+img {
+  max-width: 8rem;
+}
+
+button {
+  background-color: #202a40;
+  padding: 3px;
+  border-radius: 15px;
+}
+
+@media (max-width: 991px) {
+  img {
+    max-width: 100%;
+  }
+
+  button {
+    max-width: fit-content;
+  }
+}

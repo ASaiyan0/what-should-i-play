@@ -1,0 +1,120 @@
+/*Reset Site Styles*/
+
+a {
+  color: inherit;
+  font-weight: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+/*Module Styles*/
+
+.Main {
+  text-align: center;
+  align-content: center;
+  color: #fff;
+}
+
+.Main-filter-text {
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.Main-filter-titles,
+.Main-filter-platforms,
+.Main-filter-years,
+.Main-filter-genres,
+.Main-filter-ratings {
+  border-radius: 15px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1rem;
+  padding: 2px;
+  height: 1.5rem;
+}
+
+.Main-filter {
+  justify-content: space-around;
+  display: grid;
+  margin: 0 auto;
+  gap: 5px;
+  grid-template-columns: repeat(2, minmax(1, 3fr));
+  grid-auto-flow: column;
+  width: 100%;
+}
+
+.Main-table-header {
+  display: grid;
+  width: 100%;
+  margin: 0 auto;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: auto;
+  grid-auto-flow: column;
+  background-color: #364563;
+  border: solid 2px #202a40;
+}
+.Main-table-header-images,
+.Main-table-header-titles,
+.Main-table-header-platforms,
+.Main-table-header-years,
+.Main-table-header-genres,
+.Main-table-header-rating {
+  font-weight: bold;
+  font-size: 1rem;
+  padding: 2px;
+  height: 1.5rem;
+}
+
+.Main-table-row {
+  display: grid;
+  width: 100%;
+  margin: 0 auto;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: auto;
+  grid-auto-flow: row;
+  align-content: center;
+  align-items: center;
+  font-size: 1rem;
+  padding: 2px;
+  height: 100%;
+  border-bottom: solid 2px #202a40;
+}
+@media (max-width: 991px) {
+  .Main-filter {
+    grid-template-areas:
+      "Main-filter-text . ."
+      "Main-filter-platforms Main-filter-years Main-filter-genres"
+      "Main-filter-rating";
+    grid-template-rows: auto;
+    gap: 15px;
+    grid-auto-flow: row;
+  }
+
+  .Main-table-header {
+    min-height: 3rem;
+    gap: 3px;
+    word-wrap: break-word;
+  }
+
+  .Main-table-row {
+    gap: 3px;
+    word-wrap: break-word;
+  }
+
+  .Main-table-row img {
+    max-width: 100%;
+  }
+
+  .Main-table-row button {
+    max-width: fit-content;
+  }
+
+  .Main-filter-text,
+  .Main-filter-titles {
+    grid-column: 1 / 3;
+  }
+}

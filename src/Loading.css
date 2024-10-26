@@ -1,0 +1,10 @@
+.Loading {
+  height: 100%;
+  align-content: center;
+  text-align: center;
+}
+
+.Loading img {
+  width: 100%;
+  max-width: 300px;
+}
