@@ -12,8 +12,6 @@ function GameRow(props) {
   let storedIcon = JSON.parse(localStorage.getItem("icon" + props.game.id));
   const [icon, setIcon] = useState(storedIcon ? storedIcon : "none");
 
-  console.log(storedIcon);
-
   useEffect(() => {
     localStorage.setItem("icon" + props.game.id, JSON.stringify(icon));
   }, [icon]);
@@ -61,20 +59,17 @@ function GameRow(props) {
         <button onClick={handleHeart}>
           <img
             src={props.game.rating == "Love It" ? heart_s : heart_u}
-            height="25rem"
+            height="25px"
           />
         </button>
         <button onClick={handleLike}>
           <img
             src={props.game.rating == "Like It" ? like_s : like_u}
-            height="25rem"
+            height="25px"
           />
         </button>
         <button onClick={handleMeh}>
-          <img
-            src={props.game.rating == "Meh" ? meh_s : meh_u}
-            height="25rem"
-          />
+          <img src={props.game.rating == "Meh" ? meh_s : meh_u} height="25px" />
         </button>
         <br />
         {props.game.rating}

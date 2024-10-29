@@ -115,8 +115,8 @@ function Main(props) {
                 Platform
               </option>
               <option></option>
-              {props.platformsArray.map((platform) => (
-                <option>{platform}</option>
+              {props.platformsArray.map((platform, i) => (
+                <option key={i}>{platform}</option>
               ))}
             </select>
           </form>
@@ -164,8 +164,8 @@ function Main(props) {
                 Genre
               </option>
               <option></option>
-              {props.genresArray.map((genre) => (
-                <option>{genre}</option>
+              {props.genresArray.map((genre, i) => (
+                <option key={i}>{genre}</option>
               ))}
             </select>
           </form>
