@@ -56,7 +56,10 @@ a:hover {
   grid-auto-flow: column;
   background-color: #364563;
   border: solid 2px #202a40;
+  top: 0;
+  position: sticky;
 }
+
 .Main-table-header-images,
 .Main-table-header-titles,
 .Main-table-header-platforms,

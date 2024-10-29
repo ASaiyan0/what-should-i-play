@@ -15,7 +15,7 @@ function Main(props) {
     if (
       filtTitle != "" &&
       !game.title.includes(filtTitle) &&
-      !game.title.toLowerCase().includes(filtTitle)
+      !game.title.toLowerCase().includes(filtTitle.toLocaleLowerCase())
     ) {
       return false;
     }
@@ -81,7 +81,12 @@ function Main(props) {
       <main className="Main">
         <section className="Main-filter">
           <span className="Main-filter-text">Filters:</span>
-          <form>
+          <form
+            onSubmit={(e) => {
+              e.preventDefault();
+              return;
+            }}
+          >
             <input
               onChange={(e) => {
                 setFiltTitle(e.target.value);
@@ -92,7 +97,12 @@ function Main(props) {
               name="titles"
             />
           </form>
-          <form>
+          <form
+            onSubmit={(e) => {
+              e.preventDefault();
+              return;
+            }}
+          >
             <select
               onChange={(e) => {
                 setfiltPlatform(e.target.value);
@@ -110,7 +120,12 @@ function Main(props) {
               ))}
             </select>
           </form>
-          <form>
+          <form
+            onSubmit={(e) => {
+              e.preventDefault();
+              return;
+            }}
+          >
             <select
               className="Main-filter-years"
               id="years"
@@ -131,7 +146,12 @@ function Main(props) {
               <option>1970s & earlier</option>
             </select>
           </form>
-          <form>
+          <form
+            onSubmit={(e) => {
+              e.preventDefault();
+              return;
+            }}
+          >
             <select
               className="Main-filter-genres"
               id="genres"
@@ -149,7 +169,12 @@ function Main(props) {
               ))}
             </select>
           </form>
-          <form>
+          <form
+            onSubmit={(e) => {
+              e.preventDefault();
+              return;
+            }}
+          >
             <select
               className="Main-filter-ratings"
               id="ratings"

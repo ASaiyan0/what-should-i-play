@@ -13,11 +13,10 @@ function App() {
   const [games, setGames] = useState([]);
   const [filtPlatforms, setFiltPlatforms] = useState([]);
   const [filtGenres, setFiltGenres] = useState([]);
-  const [load, setLoad] = useState(false);
+  const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {
     if (ID && key) {
-      setLoad(true);
       getCollection();
     }
   }, [ID, key]);
@@ -90,7 +89,7 @@ function App() {
     setFiltPlatforms(filtPlatArray.sort());
     setFiltGenres(filtGenreArray.sort());
     setGames(filtArray);
-    setLoad(false);
+    setLoaded(true);
   }
 
   return (
@@ -103,10 +102,10 @@ function App() {
         />
         <br />A sort & filter tool for your game collection.
       </header>
-      {!ID && !key && load == false && <Input onID={handleID} />}
-      {ID && !key && load == false && <API onKey={handleKey} />}
-      {ID && key && load == true && <Loading />}
-      {ID && key && load == false && (
+      {!ID && !key && loaded == false && <Input onID={handleID} />}
+      {ID && !key && loaded == false && <API onKey={handleKey} />}
+      {ID && key && loaded == false && <Loading />}
+      {ID && key && loaded == true && (
         <Main
           gamesArray={games}
           platformsArray={filtPlatforms}

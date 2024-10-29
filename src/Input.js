@@ -33,7 +33,7 @@ function Input(props) {
         </section>
         <br />
         <section className="Input-entry">
-          <form className="Input-form" id="form">
+          <form className="Input-form" id="form" onSubmit={handleSubmit}>
             <input
               className="Input-textBox"
               type="text"
@@ -44,7 +44,7 @@ function Input(props) {
               value={userInput}
             />
             &nbsp;{" "}
-            <button className="Input-submit" id="submit" onClick={handleSubmit}>
+            <button className="Input-submit" id="submit">
               Submit
             </button>
           </form>

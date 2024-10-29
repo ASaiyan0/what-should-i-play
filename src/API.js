@@ -32,7 +32,7 @@ function API(props) {
         </section>
         <br />
         <section className="API-entry">
-          <form className="API-form" id="form">
+          <form className="API-form" id="form" onSubmit={handleSubmit}>
             <input
               className="API-textBox"
               type="text"
@@ -43,7 +43,7 @@ function API(props) {
               value={userInput}
             />
             &nbsp;{" "}
-            <button className="API-submit" id="submit" onClick={handleSubmit}>
+            <button className="API-submit" id="submit">
               Submit
             </button>
           </form>
